@@ -1,6 +1,6 @@
 const morgan = require('morgan');
 const express = require('express');
-const exphbs = require('express-handlebars')
+const handlebars = require('express-handlebars')
 
 
 const app = express();
@@ -10,19 +10,23 @@ const app = express();
 app.set('port', process.env.PORT || 8080)
 app.set('json spaces', 2)
 
-
-//HBS
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
-app.set('views', './views');
-
-
 //Middlewares
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('./public'))
 
+
+//HBS
+app.engine(
+    "hbs",
+    handlebars.engine({
+        extname: ".hbs",
+        defaultLayout: 'main.hbs',
+    })
+);
+app.set("view engine", "hbs");
+app.set("views", "./views");
 
 //Starting the server
 app.listen(app.get('port'), () => {

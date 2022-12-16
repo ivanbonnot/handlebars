@@ -40,5 +40,12 @@
     "price": "3000",
     "image": "dfjhdjfg",
     "description": "kkkkkkkkkkkkkk"
+  },
+  {
+    "id": 7,
+    "title": "coso",
+    "price": "23526",
+    "image": "efhfdsdfhj",
+    "description": "sfhsfgkj"
   }
 ]

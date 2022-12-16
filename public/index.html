@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="icon" type="image/png" sizes="32x32"
         href="//res.cloudinary.com/hdsqazxtw/image/upload/v1558445734/favicon-32x32_fy92aq.png">
     <title>APIRest</title>
@@ -15,12 +17,12 @@
         <form action="/api/productos" method="post">
             <h2>Ingresar nuevo producto</h2>
             <div class="border">
-            <p>Nombre: <input type="text" name="title"></p>
-            <p>Precio: <input type="text" name="price"></p>
-            <p>Url image: <input type="text" name="image"></p>
+                <p>Nombre: <input type="text" name="title"></p>
+                <p>Precio: <input type="text" name="price"></p>
+                <p>Url image: <input type="text" name="image"></p>
             </div>
             <div class="border">
-            <p>Descripción: <input type="text" name="description"></p>
+                <p>Descripción: <input type="text" name="description"></p>
             </div>
             <button type="submit" id="enviar" class="btn">Enviar</button>
         </form>

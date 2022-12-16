@@ -8,8 +8,11 @@ const productos = new Contenedor('productos.txt')
 router.get('/', async (req, response) => {
 
     const allProducts = await productos.getAll()
-    response.json(allProducts)
-
+   
+    response.render("lista", {
+        productos: allProducts,
+        hayProductos: allProducts.length
+    });
 })
 
 
