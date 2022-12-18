@@ -1,7 +1,7 @@
 const morgan = require('morgan');
 const express = require('express');
 const handlebars = require('express-handlebars')
-
+const path = require('path')
 
 const app = express();
 
@@ -26,7 +26,7 @@ app.engine(
     })
 );
 app.set("view engine", "hbs");
-app.set("views", "./views");
+app.set("views", path.join(__dirname, 'views'));
 
 //Starting the server
 app.listen(app.get('port'), () => {
