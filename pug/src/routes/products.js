@@ -38,7 +38,10 @@ router.post('/', async (req, response) => {
         await productos.save(req.body)
         // const productById = await productos.getById(id)
         const allProd = await productos.getAll()
-        response.json(allProd)
+        response.render("lista", {
+            productos: allProd,
+            hayProductos: allProd.length
+        });
 
     } else {
         response.send('Invalido, todos los campos son obligatorios')
